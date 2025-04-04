@@ -12,11 +12,13 @@ int main() {
     char A01[];
     char B01[];
     //aqui são as cartas que vão ser usadas
+    //Carta 1
     char nome_da_cidade1[50]("São Paulo");
     int população1;
     float area1;
     float pib1;
     int pontos_turisticos1;
+    //Carta 2
     char nome_da_cidade2[50]("Rio de Janeiro");
     int população2;
     float area2;
