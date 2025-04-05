@@ -1,15 +1,11 @@
-#include <stdio.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 
-
 int main() {
 #include <stdio.h>
 #include <locale.h>
-
-int main() {
 /*não consigo fazer a saída ter pontuação (ja tentei setlocale) não sei se é erro do meu compilardor,mas para fins de comodidade
 digite as cartas sem acentuação que irá dar o resultado.*/
 //aqui são as cartas que vão ser usadas
