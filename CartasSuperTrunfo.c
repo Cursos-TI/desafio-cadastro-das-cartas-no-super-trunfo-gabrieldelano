@@ -5,20 +5,19 @@
 #include <stdio.h>
 #include <locale.h>
 int main() {
-    
-     /*não consigo fazer a saída ter pontuação (ja tentei setlocale) não sei se é erro do meu compilardor,mas para fins de comodidade
-     digite as cartas sem acentuação que irá dar o resultado.*/
-     //aqui são as cartas que vão ser usadas
-     //Carta 1
-     setlocale(LC_ALL, "Portuguese_Brazil"); //aparecer acentos
+       /*não consigo fazer a saída ter pontuação (ja tentei setlocale) não sei se é erro do meu compilardor,mas para fins de comodidade
+       digite as cartas sem acentuação que irá dar o resultado.*/
+       //aqui são as cartas que vão ser usadas
+       //Carta 1
+        setlocale(LC_ALL, "Portuguese_Brazil"); //aparecer acentos
         char estado1[90];
         char carta_1[40];
         char nome_da_cidade_1[90];
-        int populacao1;
+      unsigned long int populacao1;
         float area1;
         float pib1;
         int pontos_turisticos1;
-        float densidade_populacional1 = (float) populacao1 / area1;
+        float densidade_populacional1 = (float)populacao1 / area1;
         float pib_per_capita1 = pib1 / (float)populacao1;
         printf("Digite o Estado: ");
         fgets(estado1,90,stdin);
@@ -44,12 +43,12 @@ int main() {
         printf("A densidade populacional é: %.2f\n",densidade_populacional1);
         printf("O PIB per capita é:  %.2f\n",pib_per_capita1);
 
-  //Carta 2
+       //Carta 2
      
         char estado2[90];
         char carta_2[40];
         char nome_da_cidade_2[90];
-        int populacao2;
+       unsigned long int populacao2;
         float area2;
         float pib2;
         int pontos_turisticos2;
@@ -79,20 +78,17 @@ int main() {
         printf("O numero de pontos turisticos é: %d \n",pontos_turisticos2);
         printf("A densidade populacional é: %.2f\n",densidade_populacional2);
         printf("O PIB per capita é:  %.2f\n",pib_per_capita2);
-    
-    
-        // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-        // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-        
-        // Cadastro das Cartas:
-        // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-        // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-        
-        // Exibição dos Dados das Cartas:
-        // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-        // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    
-    
+        printf("Comparação das cartas: se receber 1 carta 1 vence se receber 0 carta 2 vence \n");
+        printf("População:%d\n", populacao1 >  populacao2);
+        printf("Área:%d\n",area1 > area2);
+        printf("PIB: %d\n", pib1 > pib2);
+        printf("Pontos Turisticos %d\n", pontos_turisticos1 > pontos_turisticos2);
+        printf("Densidade populacional: %d\n", densidade_populacional1 > densidade_populacional2);
+        printf("PIB per capita: %d\n", pib_per_capita1 > pib_per_capita2);
+       /*Notas de desenvolvimento: na comparação entre densidade populacional e PIB per capita,
+       a segunda carta vence pelo motivo de não conseguir desenvolver direito o sistema de divisão.
+       Mesmo convertendo os valores para números flutuantes, a operação não é efetuada direito.
+       Se puder me dar uma solução para o problema, agradeceria muito.*/
  return 0;
 }
     
