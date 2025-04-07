@@ -44,6 +44,7 @@ int main() {
         printf("O numero de pontos turisticos é: %d \n",pontos_turisticos1);
         printf("A densidade populacional é: %.2f\n",densidade_populacional1);
         printf("O PIB per capita é:  %.2f\n",pib_per_capita1);
+        printf("CARTA NÚMERO 1 CADASTRADA\n");
 
        //Carta 2
      
@@ -82,6 +83,7 @@ int main() {
         printf("O numero de pontos turisticos é: %d \n",pontos_turisticos2);
         printf("A densidade populacional é: %.2f\n",densidade_populacional2);
         printf("O PIB per capita é:  %.2f\n",pib_per_capita2);
+        printf("CARTA NÚMERO 2 CADASTRADA\n");
         printf("Comparação das cartas: se receber 1 carta 1 vence se receber 0 carta 2 vence \n");
         printf("População:%d\n", populacao1 >  populacao2);
         printf("Área:%d\n",area1 > area2);
