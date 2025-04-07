@@ -84,6 +84,7 @@ int main() {
         printf("A densidade populacional é: %.2f\n",densidade_populacional2);
         printf("O PIB per capita é:  %.2f\n",pib_per_capita2);
         printf("CARTA NÚMERO 2 CADASTRADA\n");
+       //Comparação de cartas
         printf("Comparação das cartas: se receber 1 carta 1 vence se receber 0 carta 2 vence \n");
         printf("População:%d\n", populacao1 >  populacao2);
         printf("Área:%d\n",area1 > area2);
@@ -91,6 +92,7 @@ int main() {
         printf("Pontos Turisticos %d\n", pontos_turisticos1 > pontos_turisticos2);
         printf("Densidade populacional: %d\n", densidade_populacional1 > densidade_populacional2);
         printf("PIB per capita: %d\n", pib_per_capita1 > pib_per_capita2);
+       //desafio lógico
         if(pontos_turisticos1 > pontos_turisticos2){
           printf("A primeira carta tem mais pontos turíticos");
         } else{
