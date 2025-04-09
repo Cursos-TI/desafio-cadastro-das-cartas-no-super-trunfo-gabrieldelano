@@ -39,7 +39,7 @@ int main()
   printf("Digite o numero de pontos turisticos: ");
   scanf("%d", &pontos_turisticos1);
   printf("O numero de pontos turisticos é: %d \n", pontos_turisticos1);
-  float densidade_populacional1 = area1 / (float)populacao1;
+  float densidade_populacional1 = (float)populacao1 / area1;
   printf("A densidade populacional é: %.2f\n", densidade_populacional1);
   float pib_per_capita1 = pib1 / (float)populacao1;
   printf("O PIB per capita é: %.2f\n", pib_per_capita1);
@@ -76,27 +76,103 @@ int main()
   printf("Digite o numero de pontos turisticos: ");
   scanf("%d", &pontos_turisticos2);
   printf("O numero de pontos turisticos é: %d \n", pontos_turisticos2);
-  float densidade_populacional2 = area2 /(float) populacao2;
+  float densidade_populacional2 = (float)populacao2 / area2;
   printf("A densidade populacional é: %.2f\n", densidade_populacional2);
-  float pib_per_capita2 = pib2 / (float) populacao2;
+  float pib_per_capita2 = pib2 / (float)populacao2;
   printf("O PIB per capita é: %.2f\n", pib_per_capita2);
   printf("CARTA NÚMERO 2 CADASTRADA\n");
   // Comparação de cartas
-  printf("Comparação das cartas: se receber 1 carta 1 vence se receber 0 carta 2 vence \n");
-  printf("População:%d\n", populacao1 > populacao2);
-  printf("Área:%d\n", area1 > area2);
-  printf("PIB: %d\n", pib1 > pib2);
-  printf("Pontos Turisticos %d\n", pontos_turisticos1 > pontos_turisticos2);
-  printf("Densidade populacional: %d\n", densidade_populacional1 > densidade_populacional2);
-  printf("PIB per capita: %d\n", pib_per_capita1 > pib_per_capita2);
-  // desafio lógico
-  if (pontos_turisticos1 > pontos_turisticos2)
+
+  int opcao;
+
+  printf("Vamos comparar os atributos das cartas\n");
+  printf("Escolha um dos atributos a seguir: \n");
+  printf("1: População\n");
+  printf("2: Área\n");
+  printf("3: PIB\n");
+  printf("4: Pontos turísticos\n");
+  printf("5: Densidade de demográfica\n");
+  scanf("%d", &opcao);
+
+  switch (opcao)
   {
-    printf("A primeira carta tem mais pontos turíticos");
-  }
-  else
-  {
-    printf("A segunda carta tem mais pontos turíticos");
+  case 1:
+    printf("População:\n");
+    if (populacao1 > populacao2)
+    {
+      printf("CARTA 1 VENCE");
+    }
+    else if (populacao2 > populacao1)
+    {
+      printf("CARTA 2 VENCE");
+    }
+    else
+    {
+      printf("EMPATE");
+    }
+    break;
+  case 2:
+    printf("Área:\n");
+    if (area1 > area2)
+    {
+      printf("CARTA 1 VENCE");
+    }
+    else if (area2 > area1)
+    {
+      printf("CARTA 2 VENCE");
+    }
+    else
+    {
+      printf("EMPATE");
+    }
+    break;
+  case 3:
+    printf("PIB:\n");
+    if (pib1 > pib2)
+    {
+      printf("CARTA 1 VENCE");
+    }
+    else if (pib2 > pib1)
+    {
+      printf("CARTA 2 VENCE");
+    }
+    else
+    {
+      printf("EMPATE");
+    }
+    break;
+  case 4:
+    printf("Pontos turisticos:\n");
+    if (pontos_turisticos1 > pontos_turisticos2)
+    {
+      printf("CARTA 1 VENCE");
+    }
+    else if (pontos_turisticos2 > pontos_turisticos1)
+    {
+      printf("CARTA 2 VENCE");
+    }
+    else
+    {
+      printf("EMPATE");
+    }
+    break;
+  case 5:
+    printf("Densidade de demográfica:\n");
+    if (densidade_populacional2 > densidade_populacional1)
+    {
+      printf("CARTA 1 VENCE");
+    }
+    else if (densidade_populacional1 > densidade_populacional2)
+    {
+      printf("CARTA 2 VENCE");
+    }
+    else
+    {
+      printf("EMPATE");
+    }
+    break;
+  default:
+    printf("Digite um valor valido");
   }
   return 0;
 }
