@@ -5,6 +5,8 @@ int main()
     int Torre = 1;
     int Bispo = 1;
     int Rainha = 1;
+    int Cavalo_baixo = 1;
+    int Cavalo_esquerda = 1;
     int opcao;
     int pecas;
     int opcao_sair;
@@ -46,21 +48,22 @@ int main()
     printf("1: Torre\n");
     printf("2: Bispo\n");
     printf("3: Rainha\n");
+    printf("4: Cavalo\n");
     scanf("%d", &pecas);
     switch (pecas)
     {
     case 1:
-     printf("  A torre vai movimenta-se uma casa para direita\n");
+        printf("  A torre vai movimenta-se uma casa para direita\n");
         while (Torre <= 5)
         {
-            printf("A torre vai movimenta-se 1 casa para direita\n");
+            printf("direita\n");
             Torre++;
         }
         printf("  A torre moveu-se no total 5 casas para direita\n");
         break;
 
     case 2:
-        printf("  O Bispo vai movimenta-se uma casa para cima e ao mesmo tempo para direita\n");
+        printf("  O Bispo vai movimenta-se 1 casa para cima e ao mesmo tempo 1 para direita\n");
         do
         {
             printf("Cima\n");
@@ -70,12 +73,27 @@ int main()
         printf("  O bispo moveu-se no total 5 casas para direita e para cima\n");
         break;
     case 3:
-    printf("A rainha vai movimenta-se oito casas para esquerda\n ");
-    for(Rainha;Rainha<=8;Rainha++){
-        printf("A Rainha movimenta-se 1 casa para esquerda\n");
-    }
-    printf("  A Rainha moveu-se no total 8 casas para esquerda\n ");
-    break;
+        printf("A rainha vai movimenta-se oito casas para esquerda\n");
+        for (Rainha; Rainha <= 8; Rainha++)
+        {
+            printf("esquerda\n");
+        }
+        printf("  A Rainha moveu-se no total 8 casas para esquerda\n ");
+        break;
+
+    case 4:
+        printf("O cavalo vai movimenta-se 2 casas para baixo e 1 casa para esquerda\n");
+        for (Cavalo_esquerda; Cavalo_esquerda <= 3; Cavalo_esquerda++)
+        {
+            printf("Esquerda\n");
+            while (Cavalo_baixo < 3)
+            {
+                printf("Baixo\n");
+                Cavalo_baixo++;
+            }
+            printf(" O Cavalo moveu-se no total 2 casas para baixo e 1 para esquerda\n");
+            break;
+        }
     }
     return 0;
 }
