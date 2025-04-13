@@ -1,5 +1,40 @@
 #include <stdio.h>
 #include <locale.h>
+void TorreMove(int T)
+{
+    if (T > 0)
+    {
+        printf(" O numero de casa andadas foi: %d ", T);
+    }
+    for (T = 1; T < 7; T++)
+    {
+        printf("Direita\n");
+    }
+}
+void BispoMove(int B ,int Bv, int Bh)
+{
+   
+    printf(" O numero de casa andadas foi: %d \n", B);
+    for (Bv = 1; Bv < 6; Bv++)
+    {
+        printf("Direita\n");
+    }
+    for (Bh = 1; Bh < 6; Bh++){
+        printf("Cima\n");
+    }
+}
+void RainhaMove(int R)
+{
+    if (R > 0)
+    {
+        printf(" O numero de casa andadas foi: %d ", R);
+    }
+    for (R = 1; R < 7; R++)
+    {
+        printf("esquerda\n");
+    }
+}
+
 int main()
 {
     int Torre = 1;
@@ -10,6 +45,11 @@ int main()
     int opcao;
     int pecas;
     int opcao_sair;
+    int T;
+    int B;
+    int Bv;
+    int Bh;
+    int R;
 
     printf("1: Jogar\n");
     printf("2: Regras\n");
@@ -53,45 +93,33 @@ int main()
     switch (pecas)
     {
     case 1:
-        printf("  A torre vai movimenta-se uma casa para direita\n");
-        while (Torre <= 5)
-        {
-            printf("direita\n");
-            Torre++;
-        }
-        printf("  A torre moveu-se no total 5 casas para direita\n");
+        printf("  Digite o numero de casas: ");
+        scanf("%d", &T);
+        TorreMove(T);
         break;
 
     case 2:
-        printf("  O Bispo vai movimenta-se 1 casa para cima e ao mesmo tempo 1 para direita\n");
-        do
-        {
-            printf("Cima\n");
-            printf("Direita\n");
-            Bispo++;
-        } while (Bispo <= 5);
-        printf("  O bispo moveu-se no total 5 casas para direita e para cima\n");
+        printf("  Digite o numero de casa: ");
+        scanf("%d",&B);
+        BispoMove(B,Bv,Bh);
         break;
     case 3:
-        printf("A rainha vai movimenta-se oito casas para esquerda\n");
-        for (Rainha; Rainha <= 8; Rainha++)
-        {
-            printf("esquerda\n");
-        }
-        printf("  A Rainha moveu-se no total 8 casas para esquerda\n ");
+    printf("  Digite o numero de casa: ");
+    scanf("%d",&R);
+    RainhaMove(R);
         break;
 
     case 4:
-        printf("O cavalo vai movimenta-se 2 casas para baixo e 1 casa para esquerda\n");
+        printf("O cavalo vai movimenta-se 2 casas para cima e 1 casa para direita\n");
         for (Cavalo_esquerda; Cavalo_esquerda <= 3; Cavalo_esquerda++)
         {
-            printf("Esquerda\n");
+            printf("Direita\n");
             while (Cavalo_baixo < 3)
             {
-                printf("Baixo\n");
+                printf("Cima\n");
                 Cavalo_baixo++;
             }
-            printf(" O Cavalo moveu-se no total 2 casas para baixo e 1 para esquerda\n");
+            printf(" O Cavalo moveu-se no total 2 casas para cima e 1 para direita\n");
             break;
         }
     }
