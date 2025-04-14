@@ -23,14 +23,25 @@ void BispoMove(int B)
         }
     }
 }
-void RainhaMove(int R)
+void RainhaMoveV(int Rv)
 {
-    if (R > 0)
+    if (Rv > 0)
     {
-        printf(" O numero de casa andadas foi: %d \n", R);
-        for (R; R > 0; R--)
+        printf(" O numero de casa andadas na vertical foi: %d \n", Rv);
+        for (Rv; Rv > 0; Rv--)
         {
-            printf("%d esquerda\n", R);
+            printf("%d Cima\n", Rv);
+        }
+    }
+}
+void RainhaMoveH(int Rh)
+{
+    if (Rh > 0)
+    {
+        printf(" O numero de casa andadas horizontal foi: %d \n", Rh);
+        for (Rh; Rh > 0; Rh--)
+        {
+            printf("%d esquerda\n", Rh);
         }
     }
 }
@@ -40,6 +51,8 @@ int main()
     int Torre = 1;
     int Bispo = 1;
     int Rainha = 1;
+    int RainhaH = 1;
+    int RainhaV = 1;
     int Cavalo;
     int Cavalo_cima = 0;
     int Cavalo_baixo = 0;
@@ -64,9 +77,9 @@ int main()
         break;
     case 2:
         printf("Escolha uma peça\n");
-        printf("Caso for Torre:\n Move-se em linha reta horizontalmente ou verticalmente. Torre move-se cinco casas para a direita.\n");
-        printf("Caso for Bispo:\n Move-se na diagonal. Bispo move-se cinco casas na diagonal para cima e à direita.\n");
-        printf("Caso for Rainha:\n Move-se em todas as direções. Rainha move-se oito casas para a esquerda.\n");
+        printf("Caso for Torre:\n Move-se em linha reta horizontalmente.\n");
+        printf("Caso for Bispo:\n Move-se na diagonal.\n");
+        printf("Caso for Rainha:\n Move-se em todas as direções.\n");
         printf("3: Sair\n");
         scanf("%d", &opcao_sair);
         switch (opcao_sair)
@@ -105,9 +118,12 @@ int main()
         BispoMove(Bispo);
         break;
     case 3:
-        printf("  Digite o numero de casa: ");
+        printf("  Digite o numero de casas na horizontal: ");
         scanf("%d", &Rainha);
-        RainhaMove(Rainha);
+        printf("  Digite o numero de casas na vertical: ");
+        scanf("%d", &Rainha);
+        RainhaMoveH(Rainha);
+        RainhaMoveV(Rainha);
         break;
 
     case 4:
