@@ -4,34 +4,34 @@ void TorreMove(int T)
 {
     if (T > 0)
     {
-        printf(" O numero de casa andadas foi: %d ", T);
-    }
-    for (T = 1; T < 7; T++)
-    {
-        printf("Direita\n");
+        printf(" O numero de casa andadas foi: %d\n", T);
+        for (T; T > 0; T--)
+        {
+            printf("%d Direita\n", T);
+        }
     }
 }
-void BispoMove(int B ,int Bv, int Bh)
+void BispoMove(int B)
 {
-   
-    printf(" O numero de casa andadas foi: %d \n", B);
-    for (Bv = 1; Bv < 6; Bv++)
+    if (B > 0)
     {
-        printf("Direita\n");
-    }
-    for (Bh = 1; Bh < 6; Bh++){
-        printf("Cima\n");
+        printf(" O numero de casa andadas foi: %d \n", B);
+        for (B; B > 0; B--)
+        {
+            printf("%d Direita\n", B);
+            printf("%d Cima\n", B);
+        }
     }
 }
 void RainhaMove(int R)
 {
     if (R > 0)
     {
-        printf(" O numero de casa andadas foi: %d ", R);
-    }
-    for (R = 1; R < 7; R++)
-    {
-        printf("esquerda\n");
+        printf(" O numero de casa andadas foi: %d \n", R);
+        for (R; R > 0; R--)
+        {
+            printf("%d esquerda\n", R);
+        }
     }
 }
 
@@ -40,8 +40,9 @@ int main()
     int Torre = 1;
     int Bispo = 1;
     int Rainha = 1;
-    int Cavalo_baixo = 1;
-    int Cavalo_esquerda = 1;
+    int Cavalo;
+    int Cavalo_cima = 0;
+    int Cavalo_baixo = 0;
     int opcao;
     int pecas;
     int opcao_sair;
@@ -94,33 +95,74 @@ int main()
     {
     case 1:
         printf("  Digite o numero de casas: ");
-        scanf("%d", &T);
-        TorreMove(T);
+        scanf("%d", &Torre);
+        TorreMove(Torre);
         break;
 
     case 2:
         printf("  Digite o numero de casa: ");
-        scanf("%d",&B);
-        BispoMove(B,Bv,Bh);
+        scanf("%d", &Bispo);
+        BispoMove(Bispo);
         break;
     case 3:
-    printf("  Digite o numero de casa: ");
-    scanf("%d",&R);
-    RainhaMove(R);
+        printf("  Digite o numero de casa: ");
+        scanf("%d", &Rainha);
+        RainhaMove(Rainha);
         break;
 
     case 4:
-        printf("O cavalo vai movimenta-se 2 casas para cima e 1 casa para direita\n");
-        for (Cavalo_esquerda; Cavalo_esquerda <= 3; Cavalo_esquerda++)
+        printf("1: Cima esquerda\n");
+        printf("2: Cima direita\n");
+        printf("3: Baixo esquerda\n");
+        printf("4: Baixo direita\n");
+        printf("Digite a direção: ");
+        scanf("%d", &Cavalo);
+        switch (Cavalo)
         {
-            printf("Direita\n");
-            while (Cavalo_baixo < 3)
+        case 1:
+        {
+            for (Cavalo_cima; Cavalo_cima <= 2; Cavalo_cima++)
             {
                 printf("Cima\n");
-                Cavalo_baixo++;
             }
-            printf(" O Cavalo moveu-se no total 2 casas para cima e 1 para direita\n");
+            printf("Esquerda\n");
+
             break;
+        }
+        case 2:
+        {
+            for (Cavalo_cima; Cavalo_cima <= 2; Cavalo_cima++)
+            {
+                printf("Cima\n");
+            }
+            printf("Direita\n");
+            break;
+        }
+        case 3:
+        {
+            for (Cavalo_baixo; Cavalo_baixo <= 2; Cavalo_baixo++)
+            {
+                printf("Baixo\n");
+            }
+            printf("Esquerda\n");
+
+            break;
+        }
+        case 4:
+        {
+            for (Cavalo_baixo; Cavalo_baixo <= 2; Cavalo_baixo++)
+            {
+                printf("Baixo\n");
+            }
+            printf("Direita\n");
+
+            break;
+        }
+        default:
+        {
+            printf("Digite um valor válido:");
+            break;
+        }
         }
     }
     return 0;
