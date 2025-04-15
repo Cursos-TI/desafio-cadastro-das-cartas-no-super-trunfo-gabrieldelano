@@ -25,7 +25,7 @@ int main()
             printf("%d ", tabuleiro[i][j]);
         printf("\n");
     }
-    printf("Navio 1: %d (vertical)\n", tabuleiro[8][3]);
-    printf("Navio 2: %d (horizontal)\n", tabuleiro[8][3]);
+    printf("Navio 1: linha 9 (horizontal) e linha 2 a 4 (vertical)\n");
+    printf("Navio 2: linha 9 (vertical) e linha 9 (horizontal)\n");
     return 0;
 }
