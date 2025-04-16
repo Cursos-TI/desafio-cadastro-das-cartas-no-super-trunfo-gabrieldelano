@@ -7,13 +7,13 @@ int main()
     int tabuleiro[10][10] = {
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 3, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 3, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 3, 0},
+        {0, 0, 0, 3, 0, 0, 0, 0, 3, 0},
+        {0, 0, 3, 0, 0, 0, 0, 0, 3, 0},
+        {0, 3, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 3, 3, 3, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 3, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 3, 0, 0},
+        {0, 3, 3, 3, 0, 0, 0, 0, 3, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
     };
@@ -25,7 +25,10 @@ int main()
             printf("%d ", tabuleiro[i][j]);
         printf("\n");
     }
-    printf("Navio 1: linha 9 (horizontal) e linha 2 a 4 (vertical)\n");
-    printf("Navio 2: linha 9 (vertical) e linha 9 (horizontal)\n");
+    
+    printf("Navio 1: linha 2 até 4 (vertical) e linha 9 (horizontal)\n");
+    printf("Navio 2: linha 9 (vertical) 2 até 4 (horizontal)\n");
+    printf("Navio 3: linha 3 até 5 (vertical)\n");
+    printf("Navio 4: linha 7 até 9 (vertical)\n");
     return 0;
 }
